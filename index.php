@@ -102,24 +102,24 @@ $conn = OpenCon();
     <thead class="bg-gray-300">
         <tr>
             
-            <th>NAME</th>
-            <th>USERNAME</th>
-            <th>EMAIL</th>
-            <th>POINTS</th>
-            <th colspan="2">SHARE</th>
+            <th class="p-1">NAME</th>
+            <th class="p-1">USERNAME</th>
+            <th class="p-1">EMAIL</th>
+            <th class="p-1">POINTS</th>
+            <th class="p-1" colspan="2">SHARE</th>
         </tr>
     </thead>
 
 <?php
 while($row = mysqli_fetch_assoc($result)){?>
 <tbody > 
-    <tr class="border-t-2 border-blue-700">
+    <tr class="border-t-2 border-blue-700 p-1">
         
-        <td><?php echo $row['fullname']; ?></td>
-        <td><?php echo $row['username']; ?></td>
-        <td><?php echo $row['email']; ?></td>
-        <td><?php echo $row['point']; ?></td>
-        <td> <a href="sendtofb.php?view=<?php echo $row['username']; ?>"><i class="fab fa-facebook-square"></i></a>
+        <td class=" text-center p-1"><?php echo $row['fullname']; ?></td>
+        <td class=" text-center p-1"><?php echo $row['username']; ?></td>
+        <td class=" text-center p-1"><?php echo $row['email']; ?></td>
+        <td class=" text-center p-1"><?php echo $row['point']; ?></td>
+        <td class=" text-center p-1"> <a href="sendtofb.php?view=<?php echo $row['username']; ?>"><i class="fab fa-facebook-square"></i></a>
             </td>
         <td> <a href="sendtotwitter.php?view=<?php echo $row['username']; ?>"><i class="fab fa-twitter"></i></a>
             </td>
